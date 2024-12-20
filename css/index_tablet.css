@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+
+/* index_tablet.css */
+/* responsive - tablet UI */
+/* max-width: 1024px (768px ~ 1024px) */
+
+/* 미디어쿼리 적용 후 메뉴 아이콘으로 제이쿼리 실행할때 오류 해결법 
+    >>!important로 조절하는 것에는 한계가 있다
+
+    @media all and (min-width:1025px) {
+        header .gnb {
+        display: block !important;
+        }
+    } 
+*/
+
+
+@media all and (max-width: 1024px) {
+
+    /* body {
+        background-color: beige;
+    } */
+
+    header {
+        height: 80px;
+        padding: 10px 0;
+    }
+    header .inner {
+        position: static;
+    }
+    header .logo img {
+        margin-top: 10px;
+    }
+    header .m-menu {
+        display: block;
+        float: right;
+    }
+    header .m-menu a img {
+        height: 50px;
+        margin-top: 5px;
+        display: block;
+    }
+
+    /* 메뉴 아이콘 v2 */
+    header .m-menu-v2 {
+        float: right;
+        margin-top: 15px;
+        cursor: pointer;
+        /* outline: 2px solid red; */
+    }
+    header .m-menu-v2 span {
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: #333;
+    }
+    header .m-menu-v2 span:nth-child(2) {
+        margin: 12px 0;
+    }
+
+
+    header .gnb {
+        background-color: rgba(160, 37, 0, 0.9);
+        width: 100%;
+        top: 100%;
+        /* 
+        기준요소의 높이 100%만큼 이동
+        현재의 기준요소는 header !!
+        header {position: fixed;}로 설정되어 있어도
+        position 속성이 있으므로 절대위치의 기준이 될 수 있다!
+        */
+
+        display: none;
+    }
+    header .gnb ul li {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding-left: 5%;
+        box-sizing: border-box;
+    }
+    header .gnb ul li~li {
+        border-top: 1px solid rgba(255,255,255,0.6);
+    }
+    header .gnb ul li a {
+        color: #fff;
+    }
+
+
+    header .sns {
+        display: none;
+    }
+
+
+
+    section {
+        margin-top: 80px;
+    }
+
+    article.intro {
+        height: 500px;
+        background-position: right center;
+        background-size: 50%; 
+        /* 너비는 50%, 높이는 자동(auto)조절 */
+
+        margin-bottom: 70px;
+        /* outline: 2px solid red; */
+    }
+
+    article.intro .txt-box {
+        width: 45%;
+    }
+
+    article.intro .txt-box p.des-en {
+        font-size: 19.2px;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    article.intro .txt-box p.des-ko {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    article.intro .btn {
+        font-size: 16px;
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+
+
+    article.works {
+        margin-bottom: 70px;
+    }
+    article.works .img-box-wrap .img-box {
+        width: 49%;
+    }
+    article.works .img-box-wrap .img-box:nth-child(2n+1) {
+        margin-left: 0;
+    }
+
+
+
+    article.about {
+        margin-bottom: 70px;
+    }
+    article.about p {
+        width: 70%;
+    }
+
+    article.about .btn {
+        padding: 10px 12px;
+    }
+
+
+
+    article.news .box-wrap .box {
+        width: 32.66666666666667%;
+        width: calc(98% / 3);
+    }
+    article.news .box-wrap .box~.box {
+        margin-left: 1%;
+    }
+    article.news .box-wrap .box h3.title {
+        padding: 0 5px;
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    article.news .box-wrap .box p.date {
+        padding: 0 5px;
+        font-size: 15px;
+        font-size: 0.9375rem;
+    }
+
+
+
+    section.contact {
+        padding: 80px 0 120px;
+        margin-top: 80px;
+    }
+    section.contact p {
+        font-size: 19.2px;
+        font-size: 1.2rem;
+    }
+    section.contact .btn {
+        padding: 10px 12px;
+    }
+
+
+
+    footer .footer-box {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+
+        /* outline: 2px solid blue; */
+    }
+    footer .footer-box h4 {
+        margin-bottom: 0;
+    }
+    footer .top {
+        right: 60px;
+        bottom: 60px;
+    }
+
+
+}
